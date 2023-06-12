@@ -53,8 +53,5 @@ $("#generateForm").submit(function (event) {
       $(".chat-prew ").addClass("chat-open");
       $("#domain").text(inputText);
     })
-    .fail(function () {
-      $("#result").removeClass("error");
-      $.alert("ERROR");
-    });
+    .fail(function () {});
 });
