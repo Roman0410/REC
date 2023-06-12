@@ -1,0 +1,41 @@
+.footer {
+  background-color: black;
+  .container {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    padding: 16px;
+    @media screen and (max-width: 620px) {
+      flex-direction: column;
+    }
+  }
+
+  .footer-left {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    @media screen and (max-width: 620px) {
+      flex-direction: column;
+    }
+  }
+  .logo {
+    width: 54px;
+  }
+  .text {
+  }
+  .footer-right {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    .btn {
+      width: 90px;
+      padding: 12px;
+    }
+  }
+  .sign-in {
+  }
+
+  .sign-up {
+  }
+}

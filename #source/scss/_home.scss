@@ -1,0 +1,532 @@
+.hero {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .card {
+    max-width: 644px;
+
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .hero-title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 54px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .text {
+  }
+  form {
+    width: 100%;
+    display: flex;
+    @media screen and (max-width: 470px) {
+      flex-direction: column;
+      gap: 16px;
+    }
+    input {
+      width: 50%;
+      @media screen and (max-width: 470px) {
+        width: 100%;
+      }
+      border: none;
+      background: #f0f0f0;
+      font-family: inherit;
+      padding: 16px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.2;
+      letter-spacing: 0.08em;
+      color: #797979;
+      text-align: center;
+      &::placeholder {
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.2;
+        text-align: center;
+        letter-spacing: 0.08em;
+        color: #797979;
+        transition: all 0.2s linear;
+      }
+    }
+    .btn {
+      width: 50%;
+      @media screen and (max-width: 470px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .video-container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    video {
+      width: 100%;
+      height: 100%;
+      max-height: 506px;
+      object-fit: cover;
+    }
+  }
+
+  .play-button-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    #circle-play-b {
+      cursor: pointer;
+      pointer-events: auto;
+
+      svg {
+        width: 90px;
+        height: 90px;
+        fill: #fff;
+        stroke: #fff;
+        cursor: pointer;
+        background-color: var(--accent-color);
+        border-radius: 50%;
+        opacity: 0.9;
+        @media screen and (max-width: 768px) {
+          width: 70px;
+          height: 70px;
+        }
+        @media screen and (max-width: 450px) {
+          width: 55px;
+          height: 55px;
+        }
+      }
+    }
+  }
+}
+.chat-prew {
+  opacity: 0;
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.4s linear;
+  &.chat-open {
+    opacity: 1;
+    height: fit-content;
+  }
+  .container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .section-title {
+  }
+  .domain-card {
+    background-color: #f0f0f0;
+    position: relative;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .chat-body {
+    background-color: #f0f0f0;
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    .left-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .coppy {
+        cursor: pointer;
+      }
+    }
+    .generated-text {
+      .text {
+        text-align: left;
+        padding-top: 7px;
+      }
+      .blur-text {
+        color: transparent;
+        text-shadow: 0 0 7px #424242;
+        user-select: none;
+      }
+    }
+  }
+  .call-toRegist {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    .text {
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+}
+.steps {
+  background-color: var(--background-color);
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .step-list {
+    li {
+      background-color: #fff;
+      img {
+        width: 50%;
+        object-fit: cover;
+        @media screen and (max-width: 600px) {
+          width: 100%;
+          height: 300px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+      }
+    }
+  }
+  .col-1 {
+    display: flex;
+  }
+  .step-card {
+    width: 50%;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    .text {
+      max-width: 340px;
+    }
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+  }
+  .num {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.21;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: #e11c1c;
+  }
+  .step-title {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.21;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #000000;
+  }
+
+  .col-2 {
+    display: flex;
+    img {
+      @media screen and (max-width: 600px) {
+        order: 1;
+      }
+    }
+    .step-card {
+      @media screen and (max-width: 600px) {
+        order: 2;
+      }
+    }
+  }
+}
+.advantages {
+  background-color: var(--background-color);
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .section-title {
+  }
+  .text {
+    max-width: 644px;
+    @media screen and (max-width: 768px) {
+      max-width: 448px;
+    }
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    max-width: 328px;
+  }
+  .advantages-list {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .advantages-item {
+    width: calc((100% - 16px) / 2);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    background-color: #fff;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+  }
+  .card-title {
+  }
+  .imgBanner {
+    width: 100%;
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+}
+.faq {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .section-title {
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .faq-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--background-color);
+  }
+  .card-title {
+  }
+  .text {
+  }
+}
+.signInWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: all 0.1s linear;
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .signIn-card {
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 30px 16px 16px;
+    position: relative;
+    margin: 10px;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+
+      input {
+        width: 100%;
+        border: none;
+        background-color: #f0f0f0;
+        padding: 16px;
+      }
+      .password {
+        position: relative;
+      }
+      .toggle-password {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #797979;
+      }
+    }
+    .close-signInWrapper {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 23px;
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+    }
+    .section-title {
+    }
+    .sign-with-card {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgb(226, 226, 226);
+      .sign-with {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        border: 1px solid #f0f0f0;
+        width: 100%;
+        padding: 16px;
+        cursor: pointer;
+        .text {
+          cursor: pointer;
+        }
+      }
+      .facebook {
+      }
+      .google {
+      }
+    }
+    .ask-signUp {
+      cursor: pointer;
+      span {
+        color: var(--accent-color);
+      }
+    }
+  }
+}
+.signUpWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: all 0.1s linear;
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .signUp-card {
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 30px 16px 16px;
+    position: relative;
+    margin: 10px;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+
+      input {
+        width: 100%;
+        border: none;
+        background-color: #f0f0f0;
+        padding: 16px;
+      }
+      .password {
+        position: relative;
+      }
+      .toggle-password {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #797979;
+      }
+    }
+    .close-signUpWrapper {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 23px;
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+    }
+    .section-title {
+    }
+    .sign-with-card {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgb(226, 226, 226);
+      .sign-with {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        border: 1px solid #f0f0f0;
+        width: 100%;
+        padding: 16px;
+        cursor: pointer;
+        .text {
+          cursor: pointer;
+        }
+      }
+      .facebook {
+      }
+      .google {
+      }
+    }
+    .ask-signUp {
+      cursor: pointer;
+      span {
+        color: var(--accent-color);
+      }
+    }
+  }
+}
