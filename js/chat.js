@@ -20,3 +20,29 @@ $(".close-changePayWrapper").click(function () {
 $(".payments").click(function () {
   $(".changePayWrapper").toggleClass("hidden");
 });
+
+$(document).ready(function () {
+  $("#copyButton").click(function () {
+    let text = $("#textBlock").text();
+
+    let tempInput = $("<input>");
+    $("body").append(tempInput);
+
+    tempInput.val(text).select();
+    document.execCommand("copy");
+
+    tempInput.remove();
+
+    let blockToDisplay = $("#success");
+    blockToDisplay.show();
+    setTimeout(function () {
+      blockToDisplay.hide();
+    }, 2000);
+  });
+  $(document).ready(function () {
+    $("#NewdomainInput").on("input", function () {
+      var text = $(this).val();
+      $("#your-domain").val(text);
+    });
+  });
+});

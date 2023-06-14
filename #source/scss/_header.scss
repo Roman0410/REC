@@ -34,15 +34,16 @@
   }
   .menu-list {
     position: absolute;
-    right: -100%;
+    right: 0;
     top: 100%;
+    visibility: hidden;
     background-color: #eee;
     padding: 16px;
     display: flex;
     gap: 16px;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
     &.open {
-      right: 0;
+      visibility: visible;
     }
     .menu-item {
       cursor: pointer;

@@ -24,11 +24,11 @@
         <p class="text">My account</p>
         <p class="email text" id="userMail">email@hello.com</p>
         <img src="./img/ExpandArrow.svg" alt="" />
+        <ul class="menu-list">
+          <li class="menu-item payments">Payments</li>
+          <li class="menu-item logout">Logout</li>
+        </ul>
       </div>
-      <ul class="menu-list">
-        <li class="menu-item payments">Payments</li>
-        <li class="menu-item logout">Logout</li>
-      </ul>
     </header>
     <div class="chat-main">
       <div class="container">
@@ -37,7 +37,12 @@
           <div class="left">
             <div class="domain-card">
               <img src="./img/domain.svg" alt="" />
-              <p class="text" id="domain">realestate.com</p>
+              <input
+                type="text"
+                id="your-domain"
+                placeholder="realestate.com"
+                readonly
+              />
             </div>
             <form action="" id="chat-form">
               <select class="style-answer">
@@ -60,12 +65,15 @@
             <div class="left-bar">
               <img src="./img/brain.svg" alt="" />
 
-              <div class="coppy">
+              <div class="coppy" id="copyButton">
                 <img src="./img/coppy.svg" alt="" />
+                <div class="success" id="success">
+                  <img src="./img/check.svg" alt="" />
+                </div>
               </div>
             </div>
             <div class="generated-text">
-              <div class="text">
+              <div class="text" id="textBlock">
                 Certainly! Here's a brief passage consisting of approximately
                 1000 symbols:<br /><br />
                 <p class="answer">
@@ -121,7 +129,8 @@
           <div class="call-toRegist">
             <img src="./img/Info.svg" alt="" />
             <p class="text">
-              Register to read the full text and start chatting with AI
+              To generate a test based on a new link, please insert it into the
+              appropriate field:
             </p>
           </div>
           <input
