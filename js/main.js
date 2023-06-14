@@ -41,6 +41,9 @@ $(".sign-up").click(function () {
 $(".close-signUpWrapper").click(function () {
   $(".signUpWrapper").addClass("hidden");
 });
+$(".close-payWrapper").click(function () {
+  $(".payWrapper").toggleClass("hidden");
+});
 
 $("#generateForm").submit(function (event) {
   event.preventDefault();
@@ -54,6 +57,41 @@ $("#generateForm").submit(function (event) {
       $("#domain").text(inputText);
     })
     .fail(function () {
-      allert("Error");
+      $("#result").removeClass("error");
+      $.alert("ERROR");
     });
 });
+$("#signUp-form").submit(function (event) {
+  event.preventDefault();
+
+  let signData = $(this).serialize();
+  let inputEmail = $("#emailIN").val();
+
+  $.post("", signData)
+    .done(function (response) {
+      $(".signUpWrapper ").addClass("hidden");
+      $(".payWrapper").removeClass("hidden");
+      $("#userMail").text(inputEmail);
+    })
+    .fail(function () {});
+});
+date = new Date();
+year = date.getFullYear();
+month = date.getMonth() + 1;
+day = date.getDate();
+const monthNames = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "June",
+  "July",
+  "Aug",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+document.getElementById("current_date").innerHTML =
+  monthNames[date.getMonth()] + "  " + day + ", " + year;

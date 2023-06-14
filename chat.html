@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img class="logo" src="./img/Logo.svg" alt="" />
+      <div class="header-account">
+        <p class="text">My account</p>
+        <p class="email text" id="userMail">email@hello.com</p>
+        <img src="./img/ExpandArrow.svg" alt="" />
+      </div>
+      <ul class="menu-list">
+        <li class="menu-item payments">Payments</li>
+        <li class="menu-item logout">Logout</li>
+      </ul>
+    </header>
+    <div class="chat-main">
+      <div class="container">
+        <h2 class="section-title">chat with AI</h2>
+        <div class="chat-top">
+          <div class="left">
+            <div class="domain-card">
+              <img src="./img/domain.svg" alt="" />
+              <p class="text" id="domain">realestate.com</p>
+            </div>
+            <form action="" id="chat-form">
+              <select class="style-answer">
+                <option selected>Select description style</option>
+                <option>Elon Mask</option>
+                <option>Mark Zuckerberg</option>
+                <option>Bill Gates</option>
+              </select>
+            </form>
+          </div>
+
+          <button class="btn" type="submit" form="chat-form">Generate</button>
+        </div>
+        <div class="chat-container">
+          <div class="selected-style">
+            <img src="./img/brain.svg" alt="" />
+            <p class="style-name text">Elon Musk Style</p>
+          </div>
+          <div class="chat-body">
+            <div class="left-bar">
+              <img src="./img/brain.svg" alt="" />
+
+              <div class="coppy">
+                <img src="./img/coppy.svg" alt="" />
+              </div>
+            </div>
+            <div class="generated-text">
+              <div class="text">
+                Certainly! Here's a brief passage consisting of approximately
+                1000 symbols:<br /><br />
+                <p class="answer">
+                  "In a world where technology is advancing at an unprecedented
+                  pace, we find ourselves constantly adapting to new innovations
+                  and ideas. From artificial intelligence and virtual reality to
+                  the Internet of Things and blockchain technology, our lives
+                  are being transformed in ways we couldn't have imagined just a
+                  few decades ago. With the advent of smartphones, we are more
+                  connected than ever before. Social media platforms have become
+                  an integral part of our daily routines, allowing us to connect
+                  with friends, share our thoughts, and discover new content.
+                  However, this hyperconnectivity comes with its challenges, as
+                  we grapple with issues such as privacy concerns, information
+                  overload, and online harassment. In a world where technology
+                  is advancing at an unprecedented pace, we find ourselves
+                  constantly adapting to new innovations and ideas. From
+                  artificial intelligence and virtual reality to the Internet of
+                  Things and blockchain technology, our lives are being
+                  transformed in ways we couldn't have imagined just a few
+                  decades ago. With the advent of smartphones, we are more
+                  connected than ever before. Social media platforms have become
+                  an integral part of our daily routines, allowing us to connect
+                  with friends, share our thoughts, and discover new content.
+                  However, this hyperconnectivity comes with its challenges, as
+                  we grapple with issues such as privacy concerns, information
+                  overload, and online harassment. is advancing at an
+                  unprecedented pace, we find ourselves constantly adapting to
+                  new innovations and ideas. From artificial intelligence and
+                  virtual reality to the Internet of Things and blockchain
+                  technology, our lives are being transformed in ways we
+                  couldn't have imagined just a few decades ago. With the advent
+                  of smartphones, we are more connected than ever before. Social
+                  media platforms have become an integral part of our daily
+                  routines, allowing us to connect with friends, share our
+                  thoughts, and discover new content. However, this
+                  hyperconnectivity comes with its challenges, as we grapple
+                  with issues such as privacy concerns, information overload,
+                  and online harassment. nprecedented pace, we find ourselves
+                  constantly adapting to new innovations and ideas. From
+                  artificial intelligence and virtual reality to the Internet of
+                  Things and blockchain technology, our lives are being
+                  transformed in ways we couldn't have imagined just a few
+                  decades ago. With the advent of smartphones, we are more
+                  connected than ever before. Social media platforms have become
+                  an integral part of our daily routines, allowing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-footer">
+          <div class="call-toRegist">
+            <img src="./img/Info.svg" alt="" />
+            <p class="text">
+              Register to read the full text and start chatting with AI
+            </p>
+          </div>
+          <input
+            id="NewdomainInput"
+            type="text"
+            name="domain"
+            required
+            placeholder="Enter your domain"
+            form="chat-form"
+          />
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container" style="justify-content: center">
+        <div class="footer-left">
+          <img class="logo" src="./img/Logo.svg" alt="" />
+          <p class="text">© 2023 Sitechecker. All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="changePayWrapper hidden">
+      <div class="payCard">
+        <div class="close-changePayWrapper">
+          <img src="./img/Close.svg " alt="" />
+        </div>
+        <div class="left">
+          <div class="top">
+            <img src="./img/Logo.svg" alt="" />
+            <p class="title">Real Estate<span>Colleague</span></p>
+          </div>
+          <p class="text-top">
+            The golden sunset painted the sky with hues of orange and purple.
+          </p>
+          <div class="user-info">
+            <p class="email text" id="userMail">email@hello.com</p>
+            <p class="logout text">logout</p>
+          </div>
+          <div class="pay-method">
+            <div class="text">Accepted cards:</div>
+            <ul class="pay-list">
+              <li class="pay-item">
+                <img src="./img/Visa_2021 1.svg" alt="" />
+              </li>
+              <li class="pay-item">
+                <img src="./img/Mastercard_2019_logo 1.svg" alt="" />
+              </li>
+              <li class="pay-item">
+                <img src="./img/american-express-logo 1.svg" alt="" />
+              </li>
+              <li class="pay-item">
+                <img src="./img/Visa_2021 1.svg" alt="" />
+              </li>
+            </ul>
+          </div>
+          <div class="pay-form">
+            <form action="">
+              <input
+                type="number"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                maxlength="16"
+                placeholder="Card number"
+                required
+              />
+              <div class="card-info">
+                <input
+                  type="number"
+                  maxlength="2"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  placeholder="MM"
+                  required
+                />
+                <input
+                  type="number"
+                  maxlength="2"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  placeholder="YY"
+                  required
+                />
+                <input
+                  type="number"
+                  maxlength="4"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  placeholder="CVV"
+                  required
+                />
+              </div>
+              <input
+                type="text"
+                name="fname"
+                placeholder="First Name"
+                required
+              />
+              <input
+                type="text"
+                name="lname"
+                placeholder="Last Name"
+                required
+              />
+              <input type="number" name="zip" placeholder="Zip Code" required />
+              <div class="terms">
+                <input type="checkbox" id="terms" name="terms" required />
+                <label for="terms"
+                  >I accept the
+                  <span class="termsService">Terms of Service</span></label
+                >
+              </div>
+              <button type="submit" class="btn">Change</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/sliders.js"></script>
+    <script src="./js/chat.js"></script>
+  </body>
+</html>

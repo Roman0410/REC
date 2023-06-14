@@ -53,10 +53,13 @@
               <img src="./img/domain.svg" alt="" />
               <p class="text" id="domain">realestate.com</p>
             </div>
+            <div class="domain-card">
+              <img src="./img/domain.svg" alt="" />
+              <p class="text" id="domain">realestate.com</p>
+            </div>
             <div class="chat-body">
               <div class="left-bar">
                 <img src="./img/brain.svg" alt="" />
-
                 <div class="coppy">
                   <img src="./img/coppy.svg" alt="" />
                 </div>
@@ -86,7 +89,8 @@
             <div class="call-toRegist">
               <img src="./img/Info.svg" alt="" />
               <p class="text">
-                Register to read the full text and start chatting with AI
+                To generate a test based on a new link, please insert it into
+                the appropriate field:
               </p>
             </div>
             <div class="signUp btn">Sign up</div>
@@ -389,7 +393,7 @@
           </div>
         </div>
         <form action="" id="signUp-form">
-          <input type="email" name="email" placeholder="E-mail" />
+          <input type="email" name="email" id="emailIN" placeholder="E-mail" />
           <input type="password" name="password" placeholder="Password" />
           <input
             type="password"
@@ -404,9 +408,162 @@
         </p>
       </div>
     </div>
+    <div class="payWrapper hidden">
+      <div class="payCard">
+        <div class="close-payWrapper">
+          <img src="./img/Close.svg " alt="" />
+        </div>
+        <div class="left">
+          <div class="top">
+            <img src="./img/Logo.svg" alt="" />
+            <p class="title">Real Estate<span>Colleague</span></p>
+          </div>
+          <p class="text-top">
+            The golden sunset painted the sky with hues of orange and purple.
+          </p>
+          <div class="user-info">
+            <p class="email text" id="userMail">email@hello.com</p>
+            <p class="logout text">logout</p>
+          </div>
+          <div class="pay-method">
+            <div class="text">Accepted cards:</div>
+            <ul class="pay-list">
+              <li class="pay-item">
+                <img src="./img/Visa_2021 1.svg" alt="" />
+              </li>
+              <li class="pay-item">
+                <img src="./img/Mastercard_2019_logo 1.svg" alt="" />
+              </li>
+              <li class="pay-item">
+                <img src="./img/american-express-logo 1.svg" alt="" />
+              </li>
+              <li class="pay-item">
+                <img src="./img/Visa_2021 1.svg" alt="" />
+              </li>
+            </ul>
+          </div>
+          <div class="pay-form">
+            <form action="">
+              <input
+                type="number"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                maxlength="16"
+                placeholder="Card number"
+                required
+              />
+              <div class="card-info">
+                <input
+                  type="number"
+                  maxlength="2"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  placeholder="MM"
+                  required
+                />
+                <input
+                  type="number"
+                  maxlength="2"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  placeholder="YY"
+                  required
+                />
+                <input
+                  type="number"
+                  maxlength="4"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  placeholder="CVV"
+                  required
+                />
+              </div>
+              <input
+                type="text"
+                name="fname"
+                placeholder="First Name"
+                required
+              />
+              <input
+                type="text"
+                name="lname"
+                placeholder="Last Name"
+                required
+              />
+              <input type="number" name="zip" placeholder="Zip Code" required />
+              <div class="terms">
+                <input type="checkbox" id="terms" name="terms" required />
+                <label for="terms"
+                  >I accept the
+                  <span class="termsService">Terms of Service</span></label
+                >
+              </div>
+              <button type="submit" class="btn">Start</button>
+            </form>
+          </div>
+        </div>
+        <div class="right">
+          <p class="text top">
+            The golden sunset painted the sky with hues of orange and purple.
+          </p>
+          <ul class="info-list">
+            <li class="info-item price">
+              <p class="text">Price</p>
+              <p class="sum info">$49.95</p>
+            </li>
+            <li class="info-item period">
+              <p class="text">Billing period</p>
+              <p class="per info">Monthly</p>
+            </li>
+            <li class="info-item date">
+              <p class="text">Starting date</p>
+              <p class="info" id="current_date">Monthly</p>
+            </li>
+          </ul>
+          <ul class="includes-list">
+            <li class="includes-item">
+              <img src="./img/done.svg" alt="" />
+              <p class="card-title">100% SSL Secured Transaction with Stripe</p>
+              <p class="text">
+                Certainly! Here's a brief passage consisting of approximately
+                1000 symbols: "In a world where technology is advancing at an
+                unprecedented pace, we find ourselves constantly adapting to new
+                innovations and ideas.
+              </p>
+            </li>
+            <li class="includes-item">
+              <img src="./img/done.svg" alt="" />
+              <p class="card-title">100% SSL Secured Transaction with Stripe</p>
+              <p class="text">
+                Certainly! Here's a brief passage consisting of approximately
+                1000 symbols: "In a world where technology is advancing at an
+                unprecedented pace, we find ourselves constantly adapting to new
+                innovations and ideas.
+              </p>
+            </li>
+            <li class="includes-item">
+              <img src="./img/done.svg" alt="" />
+              <p class="card-title">100% SSL Secured Transaction with Stripe</p>
+              <p class="text">
+                Certainly! Here's a brief passage consisting of approximately
+                1000 symbols: "In a world where technology is advancing at an
+                unprecedented pace, we find ourselves constantly adapting to new
+                innovations and ideas.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/sliders.js"></script>
     <script src="./js/main.js"></script>
+
+    <!-- <div class="table-1">
+      <div class="col-1 col">
+        <div class="cell-1"></div>
+        <div class="cell-2"></div>
+      </div>
+      <div class="col-2 col"></div>
+      <div class="col-3 col"></div>
+      <div class="col-4 col"></div>
+    </div> -->
   </body>
 </html>

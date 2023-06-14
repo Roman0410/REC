@@ -116,6 +116,7 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #ffffff;
+  position: relative;
 }
 .header .header-btn {
   display: -webkit-box;
@@ -123,6 +124,64 @@ section {
   display: flex;
   gap: 16px;
 }
+.header .header-account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  padding-right: 30px;
+  cursor: pointer;
+}
+.header .header-account img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  -webkit-transform: translatey(-50%) rotate(-90deg);
+          transform: translatey(-50%) rotate(-90deg);
+}
+.header .header-account img.open {
+  -webkit-transform: translatey(-50%) rotate(0deg);
+          transform: translatey(-50%) rotate(0deg);
+}
+.header .header-account .text {
+  cursor: pointer;
+}
+.header .menu-list {
+  position: absolute;
+  right: -100%;
+  top: 100%;
+  background-color: #eee;
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.header .menu-list.open {
+  right: 0;
+}
+.header .menu-list .menu-item {
+  cursor: pointer;
+  color: #898989;
+}
+.header .menu-list .menu-item:hover {
+  color: var(--accent-color);
+}
+
 .sign-in {
   background-color: #f0f0f0;
   color: #000;
@@ -871,6 +930,284 @@ section {
   color: var(--accent-color);
 }
 
+.payWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 1;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.payWrapper.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.payWrapper .payCard {
+  background-color: #fff;
+  padding: 50px 16px 16px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  max-width: 900px;
+  max-height: 700px;
+  overflow: auto;
+  margin: 10px;
+}
+@media screen and (max-width: 768px) {
+  .payWrapper .payCard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 600px;
+  }
+}
+.payWrapper .payCard .close-payWrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 23px;
+  cursor: pointer;
+}
+.payWrapper .payCard .close-payWrapper img {
+  width: 100%;
+}
+.payWrapper .payCard .left {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+@media screen and (max-width: 768px) {
+  .payWrapper .payCard .left {
+    width: 100%;
+  }
+}
+.payWrapper .payCard .left .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+.payWrapper .payCard .left .top .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+}
+.payWrapper .payCard .left .top .title span {
+  font-weight: 400;
+}
+.payWrapper .payCard .left .text-top {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.payWrapper .payCard .left .user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.payWrapper .payCard .left .user-info .email {
+  color: #797979;
+}
+.payWrapper .payCard .left .user-info .logout {
+  text-transform: capitalize;
+  cursor: pointer;
+  color: var(--accent-color);
+}
+.payWrapper .payCard .left .pay-method .text {
+  color: #000;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+.payWrapper .payCard .left .pay-method .pay-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+.payWrapper .payCard .left .pay-method .pay-item {
+  cursor: pointer;
+  padding: 16px;
+  background-color: var(--background-color);
+}
+.payWrapper .payCard .left .pay-method .pay-item img {
+  width: 100%;
+}
+.payWrapper .payCard .left .pay-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.payWrapper .payCard .left .pay-form form input {
+  border: none;
+  padding: 16px;
+  background-color: #eee;
+}
+.payWrapper .payCard .left .pay-form form input::-webkit-outer-spin-button, .payWrapper .payCard .left .pay-form form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.payWrapper .payCard .left .pay-form .terms {
+  text-align: center;
+}
+.payWrapper .payCard .left .card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+.payWrapper .payCard .left .card-info input {
+  width: 100%;
+}
+.payWrapper .right {
+  max-height: 700px;
+  overflow: auto;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+@media screen and (max-width: 768px) {
+  .payWrapper .right {
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+  }
+}
+.payWrapper .right .top {
+  color: #000;
+  max-width: 400px;
+}
+.payWrapper .right .info-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.payWrapper .right .info-item {
+  border: 1px solid #eee;
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.payWrapper .right .includes-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.payWrapper .right .includes-list .includes-item {
+  padding: 16px;
+  border: 1px solid #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.payWrapper .right .includes-list .card-title {
+  text-align: left;
+}
+.payWrapper .right .includes-list .text {
+  text-align: left;
+}
+
 /* Слайдер */
 /* Слайдер запущен */
 /* Слайдер с точками */
@@ -1013,4 +1350,410 @@ section {
 .footer .footer-right .btn {
   width: 90px;
   padding: 12px;
+}
+.chat-main {
+  margin: 20px 0;
+  padding-bottom: 115px;
+}
+.chat-main .container {
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.chat-main .chat-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  gap: 16px;
+}
+@media screen and (max-width: 768px) {
+  .chat-main .chat-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.chat-main .chat-top .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+}
+@media screen and (max-width: 768px) {
+  .chat-main .chat-top .left {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 476px) {
+  .chat-main .chat-top .left {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.chat-main .chat-top .left .domain-card {
+  width: 50%;
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #eee;
+  gap: 16px;
+}
+@media screen and (max-width: 476px) {
+  .chat-main .chat-top .left .domain-card {
+    width: 100%;
+  }
+}
+.chat-main .chat-top .left form {
+  width: 50%;
+}
+@media screen and (max-width: 476px) {
+  .chat-main .chat-top .left form {
+    width: 100%;
+  }
+}
+.chat-main .chat-top .left form .style-answer {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border: none;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.08em;
+  color: #797979;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../../img/ExpandArrow.svg") 95%/4% no-repeat #eee;
+}
+.chat-main .chat-top .btn {
+  width: 33%;
+}
+@media screen and (max-width: 768px) {
+  .chat-main .chat-top .btn {
+    width: 100%;
+  }
+}
+.chat-main .chat-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  background-color: #f0f0f0;
+  padding: 16px;
+}
+.chat-main .chat-container .selected-style {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #d5d5d5;
+}
+.chat-main .chat-container .chat-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+.chat-main .chat-container .chat-body .left-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.chat-main .chat-container .chat-body .left-bar .coppy {
+  cursor: pointer;
+}
+.chat-main .chat-container .generated-text {
+  max-height: 340px;
+  padding-right: 20px;
+  overflow: scroll;
+}
+.chat-main .chat-container .generated-text .text {
+  text-align: left;
+}
+.chat-main .chat-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+@media screen and (max-width: 540px) {
+  .chat-main .chat-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.chat-main .chat-footer .call-toRegist {
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+  padding: 16px;
+  width: 100%;
+}
+.chat-main .chat-footer .call-toRegist .text {
+  color: #fff;
+  font-size: 14px;
+  text-align: left;
+}
+.chat-main .chat-footer input {
+  border: none;
+  padding: 16px;
+  background-color: #eee;
+  width: 500px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.08em;
+  /* HB */
+  color: #797979;
+}
+@media screen and (max-width: 540px) {
+  .chat-main .chat-footer input {
+    width: 100%;
+  }
+}
+
+.changePayWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 1;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.changePayWrapper.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.changePayWrapper .payCard {
+  background-color: #fff;
+  padding: 50px 16px 16px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 700px;
+  overflow: auto;
+  margin: 10px;
+}
+@media screen and (max-width: 768px) {
+  .changePayWrapper .payCard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 600px;
+  }
+}
+.changePayWrapper .payCard .close-changePayWrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 23px;
+  cursor: pointer;
+}
+.changePayWrapper .payCard .close-changePayWrapper img {
+  width: 100%;
+}
+.changePayWrapper .payCard .left {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+@media screen and (max-width: 768px) {
+  .changePayWrapper .payCard .left {
+    width: 100%;
+  }
+}
+.changePayWrapper .payCard .left .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+.changePayWrapper .payCard .left .top .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+}
+.changePayWrapper .payCard .left .top .title span {
+  font-weight: 400;
+}
+.changePayWrapper .payCard .left .text-top {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.changePayWrapper .payCard .left .user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.changePayWrapper .payCard .left .user-info .email {
+  color: #797979;
+}
+.changePayWrapper .payCard .left .user-info .logout {
+  text-transform: capitalize;
+  cursor: pointer;
+  color: var(--accent-color);
+}
+.changePayWrapper .payCard .left .pay-method .text {
+  color: #000;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+.changePayWrapper .payCard .left .pay-method .pay-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+.changePayWrapper .payCard .left .pay-method .pay-item {
+  cursor: pointer;
+  padding: 16px;
+  background-color: var(--background-color);
+}
+.changePayWrapper .payCard .left .pay-method .pay-item img {
+  width: 100%;
+}
+.changePayWrapper .payCard .left .pay-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.changePayWrapper .payCard .left .pay-form form input {
+  border: none;
+  padding: 16px;
+  background-color: #eee;
+}
+.changePayWrapper .payCard .left .pay-form form input::-webkit-outer-spin-button, .changePayWrapper .payCard .left .pay-form form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.changePayWrapper .payCard .left .pay-form .terms {
+  text-align: center;
+}
+.changePayWrapper .payCard .left .card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+.changePayWrapper .payCard .left .card-info input {
+  width: 100%;
 }

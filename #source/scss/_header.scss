@@ -3,18 +3,57 @@
   display: flex;
   justify-content: space-between;
   background-color: #ffffff;
-  .logo {
-  }
+  position: relative;
+
   .header-btn {
     display: flex;
     gap: 16px;
   }
 
-  .btn {
+  .header-account {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    padding-right: 30px;
+    cursor: pointer;
+    img {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transition: all 0.2s linear;
+      transform: translatey(-50%) rotate(-90deg);
+      &.open {
+        transform: translatey(-50%) rotate(0deg);
+      }
+    }
+    .text {
+      cursor: pointer;
+    }
   }
-  .sign-up {
+  .menu-list {
+    position: absolute;
+    right: -100%;
+    top: 100%;
+    background-color: #eee;
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    transition: all 0.3s linear;
+    &.open {
+      right: 0;
+    }
+    .menu-item {
+      cursor: pointer;
+      color: #898989;
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
   }
 }
+
 .sign-in {
   background-color: #f0f0f0;
   color: #000;
