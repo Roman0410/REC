@@ -1,61 +1,62 @@
+.square {
+  position: absolute;
+  z-index: -1;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.violet {
+  width: 198.927px;
+  height: 198.927px;
+  transform: rotate(30deg);
+  background: #8a1ce1;
+  left: 0;
+  top: 60%;
+}
+.blue {
+  width: 35.315px;
+  height: 35.315px;
+  transform: rotate(23.97deg);
+  background: #1cbee1;
+  left: 20%;
+  top: 18%;
+}
+.dark-blue {
+  width: 300px;
+  height: 300px;
+  transform: rotate(-30deg);
+  background: #1c24e1;
+  right: 0;
+  bottom: -7%;
+}
+.green {
+  width: 64px;
+  height: 64px;
+  transform: rotate(105deg);
+  background: #96e11c;
+  top: 14%;
+  right: 18%;
+}
+.light-green {
+  width: 120px;
+  height: 120px;
+  transform: rotate(-15deg);
+  background: #d1e11c;
+  left: 0;
+  top: 6%;
+}
+.aquamarine {
+  width: 175px;
+  height: 175px;
+  transform: rotate(28.847deg);
+  background: #1ce19a;
+  right: -2%;
+  top: 22%;
+}
 .hero {
   position: relative;
   overflow: hidden;
-  .square {
-    position: absolute;
-    z-index: -1;
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-  }
-  .violet {
-    width: 198.927px;
-    height: 198.927px;
-    transform: rotate(30deg);
-    background: #8a1ce1;
-    left: 0;
-    top: 60%;
-  }
-  .blue {
-    width: 35.315px;
-    height: 35.315px;
-    transform: rotate(23.97deg);
-    background: #1cbee1;
-    left: 20%;
-    top: 18%;
-  }
-  .dark-blue {
-    width: 300px;
-    height: 300px;
-    transform: rotate(-30deg);
-    background: #1c24e1;
-    right: 0;
-    bottom: -7%;
-  }
-  .green {
-    width: 64px;
-    height: 64px;
-    transform: rotate(105deg);
-    background: #96e11c;
-    top: 14%;
-    right: 18%;
-  }
-  .light-green {
-    width: 120px;
-    height: 120px;
-    transform: rotate(-15deg);
-    background: #d1e11c;
-    left: 0;
-    top: 6%;
-  }
-  .aquamarine {
-    width: 175px;
-    height: 175px;
-    transform: rotate(28.847deg);
-    background: #1ce19a;
-    right: -2%;
-    top: 22%;
-  }
+
   .container {
     display: flex;
     flex-direction: column;

@@ -188,20 +188,17 @@ section {
   color: #000;
 }
 
-.hero {
-  position: relative;
-  overflow: hidden;
-}
-.hero .square {
+.square {
   position: absolute;
   z-index: -1;
 }
 @media screen and (max-width: 768px) {
-  .hero .square {
+  .square {
     display: none;
   }
 }
-.hero .violet {
+
+.violet {
   width: 198.927px;
   height: 198.927px;
   -webkit-transform: rotate(30deg);
@@ -210,7 +207,8 @@ section {
   left: 0;
   top: 60%;
 }
-.hero .blue {
+
+.blue {
   width: 35.315px;
   height: 35.315px;
   -webkit-transform: rotate(23.97deg);
@@ -219,7 +217,8 @@ section {
   left: 20%;
   top: 18%;
 }
-.hero .dark-blue {
+
+.dark-blue {
   width: 300px;
   height: 300px;
   -webkit-transform: rotate(-30deg);
@@ -228,7 +227,8 @@ section {
   right: 0;
   bottom: -7%;
 }
-.hero .green {
+
+.green {
   width: 64px;
   height: 64px;
   -webkit-transform: rotate(105deg);
@@ -237,7 +237,8 @@ section {
   top: 14%;
   right: 18%;
 }
-.hero .light-green {
+
+.light-green {
   width: 120px;
   height: 120px;
   -webkit-transform: rotate(-15deg);
@@ -246,7 +247,8 @@ section {
   left: 0;
   top: 6%;
 }
-.hero .aquamarine {
+
+.aquamarine {
   width: 175px;
   height: 175px;
   -webkit-transform: rotate(28.847deg);
@@ -254,6 +256,11 @@ section {
   background: #1ce19a;
   right: -2%;
   top: 22%;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
 }
 .hero .container {
   display: -webkit-box;
@@ -1420,8 +1427,10 @@ section {
   padding: 12px;
 }
 .chat-main {
-  margin: 20px 0;
-  padding-bottom: 115px;
+  margin-top: 20px;
+  padding-bottom: 150px;
+  position: relative;
+  overflow: hidden;
 }
 .chat-main .container {
   padding: 0 15px;
